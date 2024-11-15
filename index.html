@@ -11,26 +11,35 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        function Header() {
+        function Header(props) {
+            console.log(props);
             return (
-                <div>
-                    <h1>Eve's kitchen</h1>
+                <header>
+                    <h1>{props.name}'s kitchen</h1>
                     <p>This is a paragraph</p>
-                </div>
+                </header>
             )
         }
-        function Main() {
+        function Main(props) {
             return (
                 <section>
-                    <p>We serve the most delicious food around</p>
+                    <p>We serve the most {props.adjective} food around</p>
                 </section>
+            )
+        }
+        function Footer(props) {
+            return (
+                <footer>
+                    <p>Copyright {props.year}</p>
+                </footer>
             )
         }
         function App() {
             return (
                 <div>
-                    <Header />
-                    <Main />
+                    <Header name="Adriano"/>
+                    <Main adjective="amaizing"/>
+                    <Footer year={new Date().getFullYear()}/>
                 </div>
             )
         }
