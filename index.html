@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <title>React *</title>
 </head>
 <body>
     <div id="root"></div>
-    <script type="text/javascript">
-        let ul = React.createElement(
-            "ul", 
-            { style: { color: "blue" } }, 
-            React.createElement('li', null, 'Monday'));
+    <script type="text/babel">
         ReactDOM.render(
-            ul,
+            <ul>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+            </ul>,
             document.getElementById("root")
         )
     </script>
