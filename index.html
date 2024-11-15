@@ -24,6 +24,7 @@
             return (
                 <section>
                     <p>We serve the most {props.adjective} food around</p>
+                    <img height={200} src="./istockphoto-1081422898-1024x1024.jpg" alt="A chef cooking" />
                     <ul>
                         {props.dishes.map((dish, i) => <li key={dish.id}>{dish.dishName}</li>)}
                     </ul>
