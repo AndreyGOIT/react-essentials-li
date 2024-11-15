@@ -47,14 +47,14 @@
         const dishObject = dishes.map((dish, i) => ({id: i, dishName: dish}))
         function App() {
             return (
-                <div>
+                <React.Fragment>
                     <Header name="Adriano"/>
                     <Main 
                     adjective="amaizing"
                     dishes={dishObject}
                     />
                     <Footer year={new Date().getFullYear()}/>
-                </div>
+                </React.Fragment>
             )
         }
         ReactDOM.render(
