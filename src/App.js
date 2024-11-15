@@ -1,15 +1,9 @@
 import './App.css';
+import { useState } from 'react';
 
-const [firstCity, rest] = [
-  "New York",
-  "Los Angeles",
-  "Chicago",
-  "Houston",
-  "Phoenix",
-];
-console.log(firstCity);
-console.log(rest);
 function App({ library }) {
+  const what = useState();
+  console.log(what);
   return (
     <div className="App">
       <h1>Hello from {library}</h1>
