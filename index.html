@@ -11,18 +11,17 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        let monday = "Mon";
-        let tuesday = "Tue";
-        let wednesday = "Wed";
-        let name = "React";
+        function Header() {
+            return (
+                <div>
+                    <h1>Eve's kitchen</h1>
+                    <p>This is a paragraph</p>
+                </div>
+            )
+        }
+        
         ReactDOM.render(
-            <ul>
-                <li>{monday}</li>
-                <li>{tuesday}</li>
-                <li>{wednesday}</li>
-                <li>{name.toUpperCase()}</li>
-                <li>{name.length}</li>
-            </ul>,
+            <Header />,
             document.getElementById("root")
         )
     </script>
