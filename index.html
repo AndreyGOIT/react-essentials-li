@@ -24,6 +24,9 @@
             return (
                 <section>
                     <p>We serve the most {props.adjective} food around</p>
+                    <ul>
+                        {props.dishes.map((dish) => <li>{dish}</li>)}
+                    </ul>
                 </section>
             )
         }
@@ -34,11 +37,19 @@
                 </footer>
             )
         }
+        const dishes = [
+            "Pizza",
+            "Pasta",
+            "Risotto"
+        ]
         function App() {
             return (
                 <div>
                     <Header name="Adriano"/>
-                    <Main adjective="amaizing"/>
+                    <Main 
+                    adjective="amaizing"
+                    dishes={dishes}
+                    />
                     <Footer year={new Date().getFullYear()}/>
                 </div>
             )
